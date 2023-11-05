@@ -549,13 +549,14 @@ body.light hr.separator {
 .home .home-details h1 {
   font-size: 45px;
   line-height: 45px;
-  font-weight: 700;
+  font-weight: 550;
+  color: #fff;
   margin: 18px 0 10px;
 }
 
 .home .home-details h1 span {
-  color: #fff;
-  font-weight: 600;
+  color: red;
+  font-weight: 700;
 }
 
 .home .home-details h6 {

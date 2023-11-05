@@ -1,17 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="utf-8">
     <title> Personal Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Template Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
 
-    <!-- Template CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/preloader.min.css" rel="stylesheet">
     <link href="css/circle.css" rel="stylesheet">
@@ -19,29 +15,18 @@
     <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- CSS Skin File -->
     <link href="css/skins/red.css" rel="stylesheet">
-    <link rel="alternate stylesheet" type="text/css" title="red" href="css/skins/red.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
-
-    <!-- Modernizr JS File -->
-    <script src="js/modernizr.custom.js"></script>
     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFPEQPL7XB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JFPEQPL7XB');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFPEQPL7XB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JFPEQPL7XB');
+    </script>
 </head>
-
-<body class="home">
+<body class="home" >
 <header class="header" id="navbar-collapse-toggle">
-    <!-- Fixed Navigation Starts -->
     <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
         <li class="icon-box active">
             <i class="fa fa-home"></i>
@@ -61,15 +46,7 @@
                 <h2>Portfolio</h2>
             </a>
         </li>
-        <li class="icon-box">
-            <i class="fa fa-envelope-open"></i>
-            <a href="contact.html">
-                <h2>Contact</h2>
-            </a>
-        </li>
     </ul>
-    <!-- Fixed Navigation Ends -->
-    <!-- Mobile Menu Starts -->
     <nav role="navigation" class="d-block d-lg-none">
         <div id="menuToggle">
             <input type="checkbox" />
@@ -80,14 +57,10 @@
                 <li class="active"><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
                 <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
-                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
                </ul>
         </div>
     </nav>
-    <!-- Mobile Menu Ends -->
 </header>
-<!-- Header Ends -->
-<!-- Main Content Starts -->
 <section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
     <div class="color-block d-none d-lg-block"></div>
     <div class="row home-details-container align-items-center">
@@ -96,21 +69,16 @@
             <div>
                 <img src="img/img-mobile.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
                 <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">hi there !</h6>
-                <h1 class="text-uppercase poppins-font "><span>I'm</span> Lohit K</h1>
-                <p class="open-sans-font ">Hi, I'm Lohit, a BCA student with a passion for both web design and machine learning. I'm driven by the possibilities of creating captivating web experiences while harnessing the power of data-driven algorithms.</p>
+                <h1 class="text-uppercase poppins-font">I'm <span  id="data"></span></h1>
+                <p class="open-sans-font " id="type">Hi, I'm a BCA student with a passion for both web design and machine learning. I'm driven by the possibilities of creating captivating web experiences while harnessing the power of data-driven algorithms.</p>
                 <a href="about.html" class="btn btn-about">more about me</a>
             </div>
         </div>
     </div>
 </section>
-<!-- Main Content Ends -->
 
-<!-- Template JS Files -->
 <script src="js/jquery-3.5.0.min.js"></script>
-<script src="js/styleswitcher.js"></script>
-<script src="js/preloader.min.js"></script>
 <script src="js/fm.revealator.jquery.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/cbpGridGallery.js"></script>
@@ -119,6 +87,54 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
 
+<script>
+    var textElement = document.getElementById("data");
+        var texts = ["Lohit K", "a Programmer", "a Enthusiastic Learner"];
+        var index = 0;
+        function type() {
+            textElement.textContent = "";
+            var currentText = texts[index];
+            var i = 0;
+            function typeCharacter() {
+                if (i < currentText.length) {
+                    textElement.textContent += currentText.charAt(i);
+                    i++;
+                    setTimeout(typeCharacter, 100); // Adjust the typing speed here (in milliseconds)
+                } else {
+                    setTimeout(erase, 2000); // Adjust the time to wait before erasing (in milliseconds)
+                }
+            }
+            function erase() {
+                if (i >= 0) {
+                    var tempText = currentText.substring(0, i);
+                    textElement.textContent = tempText;
+                    i--;
+                    setTimeout(erase, 50); // Adjust the erasing speed here (in milliseconds)
+                } else {
+                    index++;
+                    if (index >= texts.length) {
+                        index = 0;
+                    }
+                    setTimeout(type, 500); // Adjust the time to wait before typing next text (in milliseconds)
+                }
+            }
+            typeCharacter();
+        }
+        type();
+    </script>
+    
+    <script>
+        var i = 0;
+        var txt = '';
+        var speed = 50;
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("type").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+    </script>
 </body>
-
 </html>
