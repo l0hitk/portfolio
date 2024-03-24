@@ -16,4 +16,10 @@ Throughout the website, you'll find a user-friendly interface, visually appealin
 
 I invite you to explore my portfolio website to gain a deeper understanding of my skills, projects, and potential contributions. Should you have any questions or opportunities, feel free to reach out using the contact information provided.
 
-Thank you for visiting, and I look forward to connecting with you soon.                                  
+Thank you for visiting, and I look forward to connecting with you soon.       
+
+##Preview
+[Link](https://l0hitk.github.io/portfolio/)
+
+
+
