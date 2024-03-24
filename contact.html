@@ -160,13 +160,9 @@
           </div>
           <div class="col-12 col-lg-8">
             <form
-              id="myForm"
-              class="contactform"
-              action="https://formspree.io/f/mpzvlyok"
-              method="POST"
-              onsubmit="setTimeout(function(){window.location.reload();},5)"
-              onclick="document.getElementById('myForm').value = '' "
-            >
+              action="https://api.web3forms.com/submit"
+              method="POST">
+            <input type="hidden" name="access_key" value="66468905-d706-4b62-8fd7-c5dc3e7ddd26">
               <div class="contactform">
                 <div class="row">
                   <div class="col-12 col-md-4">
@@ -203,11 +199,6 @@
         </div>
       </div>
     </section>
-    <script>
-      function resetForm() {
-        document.getElementById("myForm").reset();
-      }
-    </script>
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/preloader.min.js"></script>
