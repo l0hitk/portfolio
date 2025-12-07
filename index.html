@@ -4,6 +4,38 @@
     <meta charset="utf-8" />
     <title>Personal Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lohit K - Web Developer & Cybersecurity Enthusiast. BCA graduate specializing in MERN stack development, seeking SOC analyst and blue team roles in Bangalore."
+    />
+    <meta
+      name="keywords"
+      content="web developer, cybersecurity, SOC analyst, MERN stack, React developer, Bangalore"
+    />
+    <meta name="author" content="Lohit K" />
+    <meta
+      property="og:title"
+      content="Lohit K - Web Developer & Cybersecurity Enthusiast"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio showcasing web development projects and cybersecurity transition journey"
+    />
+    <meta property="og:url" content="https://l0hitk.github.io/portfolio" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lohit K",
+        "jobTitle": "Web Developer",
+        "url": "https://l0hitk.github.io/portfolio",
+        "sameAs": ["https://linkedin.com/in/lohit-k"]
+      }
+    </script>
+
     <link rel="icon" href="img/img-mobile.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
@@ -66,7 +98,11 @@
           </a>
         </li>
       </ul>
-      <nav role="navigation" class="d-block d-lg-none">
+      <nav
+        role="navigation"
+        class="d-block d-lg-none"
+        aria-label="Mobile navigation"
+      >
         <div id="menuToggle">
           <input type="checkbox" />
           <span></span>
@@ -110,7 +146,7 @@
             <img
               src="img/img-mobile.jpg"
               class="img-fluid main-img-mobile d-none d-sm-block d-lg-none"
-              alt="my picture"
+              alt="Lohit K professional photo"
             />
             <h6
               class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block"
@@ -121,11 +157,13 @@
               I'm <span id="data"></span>
             </h1>
             <p class="open-sans-font" id="type">
-              Hi, I'm a BCA graduate with a passion for both web design, machine
-              learning and cyber security. I'm driven by the possibilities of
-              creating captivating web experiences while harnessing the power of
-              data-driven algorithms.
+              Web Developer at Lumos building full-stack applications with
+              React, Node.js, and MongoDB. Currently transitioning to cybersecurity through
+              Google Cybersecurity certification and hands-on security labs. Targeting SOC
+              analyst roles in Bangalore with plans to pursue graduate education
+              in defensive security.
             </p>
+
             <a href="about.html" class="btn btn-about">more about me</a>
           </div>
         </div>
@@ -146,9 +184,12 @@
       var textElement = document.getElementById("data");
       var texts = [
         "Lohit K",
+        "a Web Developer",
         "a Programmer",
-        "a Developer",
-        "a Enthusiastic Learner",
+        "a Cybersecurity Aspirant",
+        "a Blue Team Enthusiast",
+        "an Innovative Problem Solver",
+        "an Enthusiastic Learner",
       ];
       var index = 0;
       function type() {
